@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/video1.css">
+
+<title>P H Y S I C A L   M U S I C</title>
+    
+
+       <style>
+           
+           body{
+               width: 8000px;
+                background: #FFF;
+                opacity: 1;
+            }
+           
+           
+           
+           div.nav{
+               width: 1000px;
+	           height: 50px;
+               margin-top: 615px;
+               position: fixed;  
+           }
+           
+           div.page{
+               margin-top: 10px;
+           }
+           
+           #menu { 
+               background-color: black;
+               opacity: .8; 
+           }
+           #menu li { display: inline; }
+           #menu ul {
+	           list-style: none;
+           }
+           
+           #menu a {.
+	           display: block;
+               text-decoration: none;
+               color: white;
+               font-family: menlo;
+               font-size: 12px;
+            
+               padding-left: 95px;
+               padding-right: 95px;
+           }
+           
+           .panel { 
+               width: 1000px; 
+               height: 600px;
+               
+               border: solid 5px black;
+               background-color: #DDD;
+               opacity: .7;
+               
+               float: left; 
+               margin-right: 600px;
+           
+           }
+           
+       
+       </style>
+    
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+		       $("#banner a").bind("click",function(event){
+		           event.preventDefault();
+		           var target = $(this).attr("href");
+                   var width = $(window).width() - 995;
+                   var off = width/2;
+                   
+                    
+                   
+		           $("html, body").stop().animate({
+		               scrollLeft: $(target).offset().left - off,
+					   scrollTop: $(target).offset().top
+		           }, 1200);
+		       });
+			});
+		</script>
+    
+    
+        <script type="text/javascript">
+    
+            
+            
+            function marginUpdate(){
+			var width1 = $(window).width() - 1010;   
+            var pageoff = width1/2;
+            var width2 = $(window).width() - 1000;   
+            var navoff = width2/2;
+                
+	       $("div.page").css("margin-left", pageoff + "px");
+            $("div.nav").css("margin-left", navoff + "px");    
+            };
+            $(document).ready(marginUpdate);    // When the page first loads
+            $(window).resize(marginUpdate);
+            
+        </script>
+        
+        <script type="text/javascript">
+            
+            $(function(){
+                $('#video-1').fadeIn(3000);
+                $('#video-2').hide();
+                $('#video-3').hide();
+                $('#video-4').hide();
+                $('#video-1').get(0).play();
+                
+            });
+            
+        	$(document).ready(function() {
+                
+            $("#b1").bind("click",function(event){
+                $('#video-2').fadeOut(1000);
+                $('#video-3').fadeOut(1000);
+                $('#video-4').fadeOut(1000);
+                $('video').each(function () {
+                    this.pause();
+                    this.currentTime = 0;
+                });
+                $('#video-1').fadeIn(3000);
+                $('#video-1').get(0).play();
+
+            });    
+
+            $("#b2").bind("click",function(event){
+                $('#video-1').fadeOut(1000);
+                $('#video-3').fadeOut(1000);
+                $('#video-4').fadeOut(1000);                
+                $('video').each(function () {
+                    this.pause();
+                    this.currentTime = 0;
+                });
+                $('#video-2').fadeIn(3000);
+                $('#video-2').get(0).play();
+
+            });
+                
+            $("#b3").bind("click",function(event){
+                $('#video-1').fadeOut(1000);
+                $('#video-2').fadeOut(1000);
+                $('#video-4').fadeOut(1000);
+                $('video').each(function () {
+                    this.pause();
+                    this.currentTime = 0;
+                });
+                $('#video-3').fadeIn(3000);
+                $('#video-3').get(0).play();
+
+            });
+            
+            $("#b4").bind("click",function(event){
+                $('#video-1').fadeOut(1000);
+                $('#video-2').fadeOut(1000);
+                $('#video-3').fadeOut(1000);
+                $('video').each(function () {
+                    this.pause();
+                    this.currentTime = 0;
+                });
+                $('#video-4').fadeIn(3000);
+                $('#video-4').get(0).play();
+
+            });    
+                
+            });
+            
+        </script>
+    
+
+       
+ </head>
+     
+     
+ <body>
+  
+     
+     <div class="page">
+         <div id="video_1">
+            <video id="video-1" width="100%" height="100%">
+             <source src="vinyl.mp4" type="video/mp4" />
+                <object data="vinyl.mp4" width="100%" height="100%">
+                </object> 
+             </video>
+             <video id="video-2" width="100%" height="100%">
+             <source src="12cm.mp4" type="video/mp4" />
+                <object data="12cm.mp4" width="100%" height="100%">
+                </object> 
+             </video>
+             <video id="video-3" width="100%" height="100%">
+             <source src="8cm.mp4" type="video/mp4" />
+                <object data="8cm.mp4" width="100%" height="100%">
+                </object> 
+             </video>
+             <video id="video-4" width="100%" height="100%">
+             <source src="playbutton.mp4" type="video/mp4" />
+                <object data="playbutton.mp4" width="100%" height="100%">
+                </object> 
+             </video>
+         </div>
+         
+         
+     
+        <div id="page1" class="panel">
+           
+            <img class="center" src="vinyl.png" style="width:1000px;height:600px">
+        </div>
+        
+        <div id="page2" class="panel">
+           
+            <img class="center" src="12cm.png" style="width:1000px;height:600px">
+        </div>
+        
+        <div id="page3" class="panel">
+           
+            <img class="center" src="8cm.png" style="width:1000px;height:600px">
+        </div>
+        
+        <div id="page4" class="panel">
+            <img class="center" src="playbutton.png" style="width:1000px;height:600px">
+        </div>
+         
+     </div>   
+                
+        
+ 
+     <div class="nav">
+        <div id="menu">
+
+            <ul id="banner">
+                <li id="b1"><a href="#page1">Vinyl</a></li>
+                <li id="b2"><a href="#page2">12cm</a></li>
+                <li id="b3"><a href="#page3">8cm</a></li>
+                <li id="b4"><a href="#page4">Playbutton</a></li>
+            </ul>
+         </div>
+    </div>
+     
+ </body>
